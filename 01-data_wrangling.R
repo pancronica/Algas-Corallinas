@@ -38,9 +38,15 @@ mtx <- elemental %>%
         select(contains("perc")) %>% 
         as.matrix() %>% 
         scale()
+<<<<<<< HEAD
 
 rownames(mtx) <- elemental$Muestra
 
+=======
+
+rownames(mtx) <- elemental$Muestra
+
+>>>>>>> 703fccd35c946dfc59c52d7e978008829557689d
 colnames(mtx) <- word(colnames(mtx),1,sep = "\\_")
 
 # Data plotting -----------------------------------------------------------
@@ -76,6 +82,7 @@ heatmap.2(mtx,
 
 # website reference https://jokergoo.github.io/ComplexHeatmap-reference/book/
 
+
 library(ComplexHeatmap)
 library(circlize)
 
@@ -93,7 +100,8 @@ Heatmap(mtx,
         rect_gp = gpar(col = "white", lwd = 2),
         row_dend_reorder = TRUE,
         #row_km = 2,
-        row_names_gp = gpar(fontsize = 5)) 
+        row_names_gp = gpar(fontsize = 5))
+        
 
 
 
